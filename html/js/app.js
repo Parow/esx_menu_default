@@ -1,18 +1,18 @@
 (function(){
- // A FINIR
+
 	let MenuTpl =
+		
 		'<div id="menu_{{_namespace}}_{{_name}}" class="menu{{#align}} align-{{align}}{{/align}}">' +
-			'<div class="head_{{{css}}}"><span></span></div>' +
-				'<div class="categorie"><span>{{{title}}}</span></div>' +
-					'<div class="menu-items">' + 
-						'{{#elements}}' +
-							'<div class="menu-item {{#selected}}selected{{/selected}}">' +
-								'{{{label}}}{{#isSlider}} : &lt;{{{sliderLabel}}}&gt;{{/isSlider}}' +
-							'</div>' +
-						'{{/elements}}' +
-					'</div>'+
-				'</div>' +
-			'</div>'
+			'<div class="head"><span>{{{title}}}</span></div>' +
+				'<div class="menu-items">' + 
+					'{{#elements}}' +
+						'<div class="menu-item {{#selected}}selected{{/selected}}">' +
+							'{{{label}}}{{#isSlider}} : &lt;{{{sliderLabel}}}&gt;{{/isSlider}}' +
+						'</div>' +
+					'{{/elements}}' +
+				'</div>'+
+			'</div>' +
+		'</div>'
 	;
 
 	window.ESX_MENU       = {};
@@ -21,7 +21,7 @@
 	ESX_MENU.focus        = [];
 	ESX_MENU.pos          = {};
 
-	ESX_MENU.open = function(namespace, name, data){
+	ESX_MENU.open = function(namespace, name, data, color){
 
 		if(typeof ESX_MENU.opened[namespace] == 'undefined')
 			ESX_MENU.opened[namespace] = {};
@@ -39,7 +39,8 @@
 		data._index     = ESX_MENU.focus.length;
 		data._namespace = namespace;
 		data._name      = name;
-
+		
+		
 		for(let i=0; i<data.elements.length; i++){
 			data.elements[i]._namespace = namespace;
 			data.elements[i]._name      = name;
@@ -93,7 +94,9 @@
 
 				let menuData = ESX_MENU.opened[namespace][name];
 				let view     = JSON.parse(JSON.stringify(menuData))
-
+				let e = JSON.stringify(menuData)
+			//	const color = menuData["1"].color
+		//		console.log(view["1"].color)
 				for(let i=0; i<menuData.elements.length; i++){
 
 					let element = view.elements[i];

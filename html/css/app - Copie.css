@@ -1,0 +1,118 @@
+@font-face {
+  font-family: SignPainter;
+  src: url('../fonts/signpainter.ttf');
+}
+
+
+span {
+    font-family: SignPainter;
+  font-style: italic;
+    font-size: 30px;
+  font-weight: bold;
+    padding: 0 20px 0 20px;
+    position: left;
+    top: 0px;
+}
+
+
+.menu {
+  font-family: SignPainter;
+  font-size  : 6px;
+  min-width  : 500px;
+  width      : 100px;
+  color      : white;
+  box-shadow : 0px 0px 0px 0px #000;
+  position   : absolute;
+  left       : 20;
+  top        : 200; 
+}
+
+.menu.align-left {
+  left: 40;
+  top : 50%;
+  transform: translate(0, -50%); 
+}
+
+.menu.align-top-left {
+  left: 40;
+  top : 40; 
+}
+
+.menu.align-top {
+  left: 50%;
+  top : 40;
+  transform: translate(-50%, 0); 
+}
+
+.menu.align-top-right {
+  right: 40;
+  top  : 40;
+}
+
+.menu.align-right {
+  right: 40;
+  top  : 50%;
+  transform: translate(0, -50%); 
+}
+
+.menu.align-bottom-right {
+  right : 40;
+  bottom: 40;
+}
+
+.menu.align-bottom {
+  left  : 50%;
+  bottom: 40;
+  transform: translate(-50%, 0); 
+}
+
+.menu.align-bottom-left {
+  left  : 40;
+  bottom: 40;
+}
+
+.menu.align-center {
+  left : 50%;
+  top  : 50%;
+  transform: translate(-50%, -50%); 
+}
+
+.menu .head {
+  background: linear-gradient(to bottom left, #446CB3,#013243 );
+  position        : top;
+  padding-top: 55px;
+  text-align      : center;
+  color           : white;
+  height          : 80px;
+  line-height     : 40px;
+}
+
+.space {
+    height: 5px;
+    background-color: rgba(0, 0, 0, 0.7);
+}
+
+.menu .menu-items {
+    max-height : 300px;
+    overflow-y : hidden;
+    background-color: rgba(0, 0, 0, 0.7);
+    position: absolute;
+}
+
+.menu .menu-items .menu-item {
+  height          : 20px;
+  display         : block;
+  font-size       : 21px;
+  height          : 40px;
+  line-height     : 40px;
+  color           : white;
+  text-align      : left;
+  padding: 0 10px;
+  display: flex;
+  justify-content: space-between;
+
+}
+
+.menu .menu-items .menu-item.selected {
+  background-color: rgba(68, 108, 179, 0.2);
+}
