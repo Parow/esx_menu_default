@@ -79,4 +79,4 @@ everything is possible :
 ![Exemple](https://i.gyazo.com/9fd978ab07fdde2e7c68f5fa70555b7f.png)
 
 To edit some header there is the template.psd but there is a lot of header in img folder
-to add an image use your knowledge i won't help you for all but there is my discord : Parow#1733
+
